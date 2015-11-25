@@ -4,11 +4,11 @@
  * Date: 18-11-15 - 10:35
  */
 
-use Symfony\Component\Routing;
+use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Route;
 
 
-$routes = new Routing\RouteCollection();
+$routes = new RouteCollection();
 
 $routes->add(
 	'leap_year',
@@ -21,21 +21,10 @@ $routes->add(
 );
 
 $routes->add(
-	'hello',
-	new Route( '/{name}',
-	           [
-		           'name'        => 'Anonymous',
-		           '_controller' => "Calendar\\Controller\\HomeController::indexAction"
-	           ]
-	)
-);
-
-$routes->add(
 	'home',
 	new Route( '/',
 	           [
-		           'name'        => 'Anonymous',
-		           '_controller' => "Calendar\\Controller\\HomeController::indexAction"
+		           '_controller' => "CampuswerkSite\\Controller\\Home::index"
 	           ]
 	)
 );
