@@ -4,27 +4,27 @@
  * Date: 18-11-15 - 10:35
  */
 
-use Symfony\Component\Routing\RouteCollection;
 use Symfony\Component\Routing\Route;
+use Symfony\Component\Routing\RouteCollection;
 
 
 $routes = new RouteCollection();
 
 $routes->add(
-	'leap_year',
-	new Route( '/is_leap_year/{year}',
+	'home',
+	new Route( '/',
 	           [
-		           'year'        => null,
-		           '_controller' => 'Calendar\\Controller\\LeapYearController::indexAction',
+		           '_controller' => "CampuswerkSite\\Controllers\\Home::index"
 	           ]
 	)
 );
 
 $routes->add(
-	'home',
-	new Route( '/',
+	'homeName',
+	new Route( '/{name}',
 	           [
-		           '_controller' => "CampuswerkSite\\Controller\\Home::index"
+		           'name'        => "Anonymous",
+		           '_controller' => "CampuswerkSite\\Controllers\\Home::name"
 	           ]
 	)
 );

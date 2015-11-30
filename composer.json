@@ -8,7 +8,8 @@
         "symfony/config": "^2.7",
         "symfony/yaml": "^2.7",
         "phpunit/phpunit": "^5.0",
-        "twig/twig": "^1.23"
+        "twig/twig": "^1.23",
+        "symfony/dependency-injection": "^2.7"
     },
     "authors": [
         {
@@ -19,7 +20,8 @@
     "autoload": {
         "psr-0": {
             "Framework\\": "src/",
-            "Calendar\\": "src/"
+            "Calendar\\": "src/",
+            "CampuswerkSite\\": "src/"
         }
     }
 }

@@ -11,5 +11,6 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'Framework\\' => array($baseDir . '/src'),
+    'CampuswerkSite\\' => array($baseDir . '/src'),
     'Calendar\\' => array($baseDir . '/src'),
 );
